@@ -7,6 +7,13 @@
 </a>
 
 <hr>
+<form action="/modify_director/<%= @the_director.id %>" method="post">
+  <div><label for="name_box">Name</label><input id="name_box" type="text" name="query_name" value=<%= @the_director.name %>></div>
+  <div><label for="dob_box">Dob</label><input id="dob_box" type="date" name="query_dob" value=<%= @the_director.dob %>></div>
+  <div><label for="bio_box">Bio</label><textarea id="bio_box" name="query_bio" rows="3"><%= @the_director.bio %></textarea></div>
+  <div><label for="image_box">Image</label><input id="image_box" type="text" name="query_image" value=<%= @the_director.image %>></div>
+  <button>Update director</button>
+</form>
 
 <dl>
   <dt>
